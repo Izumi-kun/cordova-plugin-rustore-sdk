@@ -23,6 +23,7 @@
     </js-module>
 
     <config-file target="res/xml/config.xml" parent="/*">
+      <preference name="GradlePluginKotlinEnabled" value="true" />
       <feature name="RuStorePlugin">
         <param name="android-package" value="org.apache.cordova.plugin.RuStorePlugin"/>
       </feature>
