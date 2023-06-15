@@ -86,7 +86,7 @@ class RuStorePlugin : CordovaPlugin() {
 		return true
 	}
 	else if(action == "getPurchases") {
-	  getPurchases(args, callbackContext)
+	  getPurchases(callbackContext)
 	  return true
 	}
 	else if(action == "purchaseProduct") {
@@ -339,10 +339,9 @@ class RuStorePlugin : CordovaPlugin() {
   /**
   * Called to get the list of app's purchases
   *
-  * @param args JSON array containing all the arguments this action was called with
   * @param callbackContext The callback context used when calling back into JS code
   */
-  private fun getPurchases(args: JSONArray, callbackContext: CallbackContext) {
+  private fun getPurchases(callbackContext: CallbackContext) {
 	// TODO: check if initialized?
 	
 	RuStoreBillingClient.purchases.getPurchases()
