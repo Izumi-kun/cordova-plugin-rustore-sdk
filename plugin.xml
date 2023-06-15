@@ -16,13 +16,12 @@
     <engine name="cordova-android" version=">=9.0.0"/>
   </engines>
 
-  <js-module src="www/rustore.js" name="rustore">
-    <clobbers target="window.plugins.ruStore"/>
-  </js-module>
-
   <!-- android -->
   <platform name="android">
-	  
+    <js-module src="www/rustore.js" name="rustore">
+      <clobbers target="plugins.ruStore"/>
+    </js-module>
+
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="RuStorePlugin">
         <param name="android-package" value="org.apache.cordova.plugin.RuStorePlugin"/>
