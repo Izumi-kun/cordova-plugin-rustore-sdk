@@ -86,7 +86,7 @@ var argscheck = require('cordova/argscheck');
    * @param onError A callback that will be called if there's some error
    */
   RuStore.prototype.purchaseProduct = function (product, onSuccess, onError) {
-    argscheck.checkArgs('S', 'RuStore.purchaseProduct', arguments)
+    argscheck.checkArgs('O', 'RuStore.purchaseProduct', arguments)
     exec(onSuccess, onError, 'RuStorePlugin', 'purchaseProduct', [product])
   }
 
